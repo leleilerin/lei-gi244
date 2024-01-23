@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-    [Header("Move")] 
-    [SerializeField] private float moveSpeed;
-
-    [SerializeField] private float xInput;
-    [SerializeField] private float zInput;
-
-    public static CameraController instance;
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
