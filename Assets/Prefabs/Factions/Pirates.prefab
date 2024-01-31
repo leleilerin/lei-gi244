@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5325226553476303431}
   - component: {fileID: 5905582119552868923}
   m_Layer: 0
-  m_Name: Britain
+  m_Name: Pirates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aed41067f133f14d9b9ddc46ccc1875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nation: 1
+  nation: 2
   food: 0
   wood: 0
   gold: 0

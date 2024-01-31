@@ -60,6 +60,12 @@ public class Unit : MonoBehaviour
     {
         navAgent = GetComponent<NavMeshAgent>();
     }
+    
+    public void ToggleSelectionVisual(bool flag)
+        {
+            if (selectionVisual != null)
+                selectionVisual.SetActive(flag);
+        }
 
 
 }
