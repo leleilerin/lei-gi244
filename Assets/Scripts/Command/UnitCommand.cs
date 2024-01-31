@@ -31,6 +31,7 @@ public class UnitCommand : MonoBehaviour
     private void CommandToGround(RaycastHit hit, Unit unit)
     {
         UnitsMoveToPosition(hit.point, unit);
+        CreateVFXMarker(hit.point, MainUI.instance.SelectionMarker);
     }
 
     private void TryCommand(Vector2 screenPos)
@@ -49,6 +50,15 @@ public class UnitCommand : MonoBehaviour
             }
         }
     }
+
+    private void CreateVFXMarker(Vector3 pos, GameObject vfxPrefab)
+    {
+        if (vfxPrefab == null)
+            return;
+
+        Instantiate(vfxPrefab, new Vector3(pos.x, 0.1f, pos.z), Quaternion.identity);
+    }
+
 
     // Update is called once per frame
     void Update()
