@@ -35,7 +35,7 @@ public class Building : Structure
     {
         Debug.Log(structureName + " create " + i + ":" + unitPrefabs.Length);
 
-        if (unitPrefabs.Length == 0)
+        if (unitPrefabs.Length == i)
         {
             return;
         }
@@ -66,12 +66,12 @@ public class Building : Structure
         
         recruitList.Add(unit);
         
-        Debug.Log("Adding" + "to Recruit List");
+        Debug.Log("Adding" + unitPrefabs[i] + " to Recruit List");
     }
 
-    public void CreateUnitCompleted()
+    public void CreateUnitCompleted(int i)
     {
-        int id = recruitList[0].ID;
+        int id = recruitList[i].ID;
 
         if (unitPrefabs[id] == null)
         {
@@ -80,7 +80,7 @@ public class Building : Structure
 
         GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
         
-        recruitList.RemoveAt(0);
+        recruitList.RemoveAt(i);
 
         Unit unit = unitObj.GetComponent<Unit>();
         unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
@@ -126,7 +126,31 @@ public class Building : Structure
                 {
                     curUnitProgress = 0;
                     curUnitWaitTime = 0f;
-                    CreateUnitCompleted();
+                    CreateUnitCompleted(0);
+                }
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ToCreateUnit(1);
+        }
+
+        if ((recruitList.Count > 1) && (recruitList[1] != null))
+        {
+            unitTimer += Time.deltaTime;
+            curUnitWaitTime = recruitList[1].UnitWaitTime;
+
+            if (unitTimer >= curUnitWaitTime)
+            {
+                curUnitProgress++;
+                unitTimer = 0f;
+
+                if (curUnitProgress >= 100)
+                {
+                    curUnitProgress = 0;
+                    curUnitWaitTime = 0f;
+                    CreateUnitCompleted(1);
                 }
             }
         }
