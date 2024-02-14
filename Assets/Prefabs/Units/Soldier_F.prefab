@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  unitName: 
+  unitName: Female Soldier
   unitPic: {fileID: 0}
   curHP: 0
   maxHP: 100

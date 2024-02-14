@@ -30,6 +30,10 @@ public class UnitSelect : MonoBehaviour
         instance = this;
     }
 
+    private void ShowUnit(Unit u)
+    {
+        InfoManager.instance.ShowAllInfo(u);
+    }
     private void SelectUnit(RaycastHit hit)
     {
         curUnit = hit.collider.GetComponent<Unit>();
@@ -37,6 +41,11 @@ public class UnitSelect : MonoBehaviour
         curUnit.ToggleSelectionVisual(true);
 
         Debug.Log("Selected Unit");
+
+        if (GameManager.instance.MyFaction.IsMyUnit(curUnit))
+        {
+            ShowUnit(curUnit);
+        }
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -66,6 +75,9 @@ public class UnitSelect : MonoBehaviour
     {
         ClearAllSelectionVisual();
         curUnit = null;
+        
+        //clear UI
+        InfoManager.instance.ClearAllInfo();
     }
 
     // Update is called once per frame
