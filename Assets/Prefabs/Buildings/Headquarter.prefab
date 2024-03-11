@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7571719109534072606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -163,7 +163,7 @@ Transform:
   - {fileID: 1809742999368030582}
   - {fileID: 3776078476256824050}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3561414176642862466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +182,11 @@ MonoBehaviour:
   maxHP: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 5872351006223410514}
+  structureCost:
+    food: 1
+    wood: 1
+    gold: 1
+    stone: 1
   spawnPoint: {fileID: 4641707850161896818}
   rallyPoint: {fileID: 1809742999368030582}
   unitPrefabs:
@@ -192,6 +197,8 @@ MonoBehaviour:
   curUnitProgress: 0
   curUnitWaitTime: 0
   isFunctional: 0
+  isHQ: 0
+  intoTheGround: 5
 --- !u!65 &2309056520441581059
 BoxCollider:
   m_ObjectHideFlags: 0

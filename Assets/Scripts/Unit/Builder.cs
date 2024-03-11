@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Builder : MonoBehaviour
 {
@@ -161,6 +162,16 @@ public class Builder : MonoBehaviour
         if (toBuild) // if this unit is to build something
         {
             GhostBuildingFollowsMouse();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    return;
+                }
+                
+                CheckClickOnGround();
+            }
 
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
                 CancelToBuild();
