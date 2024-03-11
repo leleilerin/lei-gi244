@@ -35,11 +35,17 @@ public class Building : Structure
         get { return isFunctional; }
         set { isFunctional = value; }
     }
+
+    [SerializeField] private bool isHQ;
+    public bool IsHQ { get { return isHQ; } }
+
+    [SerializeField] private float intoTheGround = 5f;
+    public float IntoTheGround { get { return intoTheGround; } }
     
     //start
     void Start()
     {
-        curHP = maxHP;
+        
     }
 
     public void ToCreateUnit(int i)
@@ -94,6 +100,7 @@ public class Building : Structure
         recruitList.RemoveAt(i);
 
         Unit unit = unitObj.GetComponent<Unit>();
+        unit.Faction = faction;
         unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
         
         //Add unit into faction's Army
