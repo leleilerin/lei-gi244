@@ -42,11 +42,10 @@ public class Building : Structure
     [SerializeField] private float intoTheGround = 5f;
     public float IntoTheGround { get { return intoTheGround; } }
     
-    //start
-    void Start()
-    {
-        
-    }
+    private float timer = 0f; //Constructing timer
+    public float Timer { get { return timer; } set { timer = value; } }
+    private float waitTime = 2f; //How fast it will be construct, higher is longer
+    public float WaitTime { get { return waitTime; } set { waitTime = value; } }
 
     public void ToCreateUnit(int i)
     {

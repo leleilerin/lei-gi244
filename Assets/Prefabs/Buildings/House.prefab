@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 3664062744801026230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8, y: 0, z: 3.8}
+  m_LocalPosition: {x: -5.24, y: 0, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -178,14 +178,15 @@ MonoBehaviour:
     stone: 1
   spawnPoint: {fileID: 7050677783542930352}
   rallyPoint: {fileID: 5169417289337764862}
-  unitPrefabs: []
+  unitPrefabs:
+  - {fileID: 186328, guid: ac068e22c5cffc845a63f7a843c2bf19, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
   isFunctional: 0
   isHQ: 0
-  intoTheGround: 5
+  intoTheGround: 2
 --- !u!65 &519230592492884917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -328,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 8150630531912784845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.25, y: 0, z: 12.52}
+  m_LocalPosition: {x: 4.94, y: 0, z: 6.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
