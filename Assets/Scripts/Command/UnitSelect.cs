@@ -89,11 +89,13 @@ public class UnitSelect : MonoBehaviour
         
         //clear UI
         InfoManager.instance.ClearAllInfo();
+        ActionManager.instance.ClearAllInfo();
     }
     
     private void ShowBuilding(Building b)
     {
         InfoManager.instance.ShowAllInfo(b);
+        ActionManager.instance.ShowCreateUnitMode(b);
     }
     
     private void BuildingSelect(RaycastHit hit)

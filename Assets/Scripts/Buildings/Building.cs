@@ -17,6 +17,10 @@ public class Building : Structure
     }
 
     [SerializeField] private GameObject[] unitPrefabs;
+    public GameObject[] UnitPrefabs
+    {
+        get { return unitPrefabs; }
+    }
 
     [SerializeField] private List<Unit> recruitList = new List<Unit>();
 
@@ -24,6 +28,13 @@ public class Building : Structure
     [SerializeField] private int curUnitProgress = 0;
 
     [SerializeField] private float curUnitWaitTime = 0f;
+
+    [SerializeField] private bool isFunctional;
+    public bool IsFunctional
+    {
+        get { return isFunctional; }
+        set { isFunctional = value; }
+    }
     
     //start
     void Start()
@@ -107,10 +118,10 @@ public class Building : Structure
     //Update
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        /*if (Input.GetKeyDown(KeyCode.G))
         {
             ToCreateUnit(0);
-        }
+        }*/
 
         if ((recruitList.Count > 0) && (recruitList[0] != null))
         {
@@ -131,10 +142,10 @@ public class Building : Structure
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             ToCreateUnit(1);
-        }
+        }*/
 
         if ((recruitList.Count > 1) && (recruitList[1] != null))
         {

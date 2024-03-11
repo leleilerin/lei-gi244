@@ -191,6 +191,7 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 0
 --- !u!65 &2309056520441581059
 BoxCollider:
   m_ObjectHideFlags: 0
