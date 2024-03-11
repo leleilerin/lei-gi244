@@ -75,9 +75,6 @@ public class InfoManager : MonoBehaviour
         hpTxt.text = $"{building.CurHP}/{building.MaxHP}";
     }
     
-    
-
-    
     private void Awake()
     {
         instance = this;
