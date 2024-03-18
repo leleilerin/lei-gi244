@@ -10,7 +10,7 @@ public enum ResourceType
     Gold,
     Stone
 }
-public class NewBehaviourScript : MonoBehaviour
+public class ResourceSource : MonoBehaviour
 {
     [SerializeField] private string rsrcName;
     public string RsrcName { get { return rsrcName; } }
@@ -34,4 +34,41 @@ public class NewBehaviourScript : MonoBehaviour
     private UnityEvent onRsrcQuantityChange;
     [SerializeField]
     private UnityEvent onInfoQuantityChange;
+    
+    //called when a unit gathers the resource
+    public void GatherResource(int amountRequest)
+    {
+        int amountToGive;
+
+        // make sure we don't give more than we have
+        if (amountRequest > quantity) //not enough
+            amountToGive = quantity;
+        else //enough
+            amountToGive = amountRequest;
+
+        quantity -= amountToGive;
+
+        // if we're depleted, delete the resource
+        if (quantity <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // toggles green selection ring around resource
+    public void ToggleSelectionVisual(bool selected)
+    {
+        if (SelectionVisual != null)
+            SelectionVisual.SetActive(selected);
+    }
+    
+    void Update()
+    {
+        if (quantity <= 0)
+        {
+            InfoManager.instance.ClearAllInfo();
+            Destroy(gameObject);
+        }
+    }
 }
+

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9571380}
   - component: {fileID: 277704971951164507}
   - component: {fileID: -8221629872800005955}
-  - component: {fileID: 9184759744936168417}
   - component: {fileID: -324781660236266057}
+  - component: {fileID: 9184759744936168417}
   - component: {fileID: 7793152670845703137}
+  - component: {fileID: 810266076665987518}
   m_Layer: 6
   m_Name: Builder
   m_TagString: Unit
@@ -105,6 +106,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-324781660236266057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3b9a7dc434382429f07babed71cc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9184759744936168417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,18 +152,8 @@ MonoBehaviour:
   unitWaitTime: 0.01
   isBuilder: 1
   builder: {fileID: 0}
---- !u!114 &-324781660236266057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf3b9a7dc434382429f07babed71cc74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isWorker: 1
+  worker: {fileID: 0}
 --- !u!114 &7793152670845703137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +177,24 @@ MonoBehaviour:
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
+--- !u!114 &810266076665987518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c81abac14924646952d32c461ddacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curResourceSource: {fileID: 0}
+  gatherRate: 0.5
+  gatherAmount: 1
+  amountCarry: 0
+  maxCarry: 25
+  carryType: 0
 --- !u!1 &44025187064454877
 GameObject:
   m_ObjectHideFlags: 0
