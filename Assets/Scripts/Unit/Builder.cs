@@ -191,7 +191,6 @@ public class Builder : MonoBehaviour
             }
         }
     }
-
     
     private void MoveToBuild(GameObject b)
     {
@@ -201,6 +200,7 @@ public class Builder : MonoBehaviour
         unit.NavAgent.SetDestination(b.transform.position);
         unit.NavAgent.isStopped = false;
     }
+    
     private void OnTriggerStay(Collider other)
     {
         if (unit.State == UnitState.Die)
@@ -220,8 +220,6 @@ public class Builder : MonoBehaviour
         if (ghostBuilding != null)
             Destroy(ghostBuilding);
     }
-    
-    
     
     void Update()
     {
@@ -256,9 +254,4 @@ public class Builder : MonoBehaviour
                 break;
         }
     }
-
-
-
-
-
 }
