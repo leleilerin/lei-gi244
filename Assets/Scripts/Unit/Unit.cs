@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -36,6 +37,9 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private Sprite unitPic;
     public Sprite UnitPic { get { return unitPic; } }
+
+    [SerializeField] private GameObject unitWeapon;
+    public GameObject UnitWeapon { get { return unitWeapon; } }
 
     [SerializeField] private int curHP;
     public int CurHP { get { return curHP; } set { curHP = value; } }
@@ -119,10 +123,15 @@ public class Unit : MonoBehaviour
     }
 
     public void ToggleSelectionVisual(bool flag)
-        {
+    {
             if (selectionVisual != null)
                 selectionVisual.SetActive(flag);
-        }
+    }
+    public void ToggleUnitWeapon(bool isUse)
+    {
+        if (unitWeapon != null)
+            unitWeapon.SetActive(isUse);
+    }
 
     public void SetState(UnitState toState)
     {

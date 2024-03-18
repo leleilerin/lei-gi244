@@ -5262,6 +5262,7 @@ MonoBehaviour:
   id: 0
   unitName: Soldier
   unitPic: {fileID: 21300000, guid: e665de935a535824eacda31fde0156ea, type: 3}
+  unitWeapon: {fileID: 6454616020111711370}
   curHP: 100
   maxHP: 100
   moveSpeed: 5
@@ -5279,6 +5280,12 @@ MonoBehaviour:
     gold: 20
     stone: 0
   unitWaitTime: 0.01
+  isBuilder: 0
+  builder: {fileID: 0}
+  isWorker: 0
+  worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
 --- !u!114 &-324781660236266057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6398,5 +6405,10 @@ PrefabInstance:
 --- !u!4 &6454616020111538126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460526, guid: b5928af220c9ec6458677c57ae7a28b7, type: 3}
+  m_PrefabInstance: {fileID: 6454616020111601952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6454616020111711370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 126378, guid: b5928af220c9ec6458677c57ae7a28b7, type: 3}
   m_PrefabInstance: {fileID: 6454616020111601952}
   m_PrefabAsset: {fileID: 0}
