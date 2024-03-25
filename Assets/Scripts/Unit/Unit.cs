@@ -38,9 +38,6 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private Sprite unitPic;
     public Sprite UnitPic { get { return unitPic; } }
-
-    [SerializeField] private GameObject unitWeapon;
-    public GameObject UnitWeapon { get { return unitWeapon; } }
     
     [SerializeField]
     private Unit curEnemyUnitTarget;
@@ -74,6 +71,9 @@ public class Unit : MonoBehaviour
     
     [SerializeField] private float weaponRange;
     public float WeaponRange { get { return weaponRange; } }
+    
+    [SerializeField] private float defendRange = 30f; //the range that a unit will defensively auto-attack
+    public float DefendRange { get { return defendRange; } }
 
     [SerializeField] private UnitState state;
     public UnitState State { get { return state; } set { state = value; } }
@@ -136,11 +136,6 @@ public class Unit : MonoBehaviour
     {
             if (selectionVisual != null)
                 selectionVisual.SetActive(flag);
-    }
-    public void ToggleUnitWeapon(bool isUse)
-    {
-        if (unitWeapon != null)
-            unitWeapon.SetActive(isUse);
     }
 
     public void SetState(UnitState toState)

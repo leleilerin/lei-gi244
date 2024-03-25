@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: -2152507927147156761}
   - component: {fileID: -150634159373441844}
   - component: {fileID: 6184790864991495496}
+  - component: {fileID: 3831670378292096547}
   m_Layer: 6
   m_Name: Soldier_F
   m_TagString: Unit
@@ -486,6 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2648488320986028970}
   - {fileID: 424960}
   - {fileID: 463934}
   - {fileID: 7725952396901807283}
@@ -572,7 +574,10 @@ MonoBehaviour:
   id: 1
   unitName: Female Soldier
   unitPic: {fileID: 21300000, guid: aeb9da5d6ab83fd4a952e9d34be35751, type: 3}
-  unitWeapon: {fileID: 8201193247500353771}
+  unitWeapon: {fileID: 477963066434627522}
+  curEnemyUnitTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
   curHP: 0
   maxHP: 100
   moveSpeed: 5
@@ -581,6 +586,7 @@ MonoBehaviour:
   armour: 0
   visualRange: 0
   weaponRange: 0
+  defendRange: 30
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 6553584879822203742}
@@ -606,6 +612,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3b9a7dc434382429f07babed71cc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3831670378292096547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc585d0156cf31446ab539f14588cc80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &129178
@@ -2110,6 +2128,37 @@ Transform:
   - {fileID: 490050}
   m_Father: {fileID: 453744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &477963066434627522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2648488320986028970}
+  m_Layer: 0
+  m_Name: unitweapondummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2648488320986028970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477963066434627522}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453744}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7660211263384513262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2257,10 +2306,5 @@ PrefabInstance:
 --- !u!4 &8201193247499987887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460526, guid: b5928af220c9ec6458677c57ae7a28b7, type: 3}
-  m_PrefabInstance: {fileID: 8201193247500315969}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8201193247500353771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 126378, guid: b5928af220c9ec6458677c57ae7a28b7, type: 3}
   m_PrefabInstance: {fileID: 8201193247500315969}
   m_PrefabAsset: {fileID: 0}

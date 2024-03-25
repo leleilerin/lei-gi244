@@ -64,8 +64,37 @@ PrefabInstance:
       propertyPath: unitName
       value: Fr. Regular
       objectReference: {fileID: 0}
+    - target: {fileID: 9184759744936168417, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+      propertyPath: unitWeapon
+      value: 
+      objectReference: {fileID: 7111705261037870368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 186328, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5227412776194695500}
   m_SourcePrefab: {fileID: 100100000, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+--- !u!1 &6451571374158193086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 186328, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+  m_PrefabInstance: {fileID: 6451571374158116454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5227412776194695500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6451571374158193086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc585d0156cf31446ab539f14588cc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7111705261037870368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4267529786365422406, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+  m_PrefabInstance: {fileID: 6451571374158116454}
+  m_PrefabAsset: {fileID: 0}
