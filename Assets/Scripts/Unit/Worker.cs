@@ -49,6 +49,7 @@ public class Worker : MonoBehaviour
     
     private void MoveToResourceUpdate()
     {
+        CheckForResource();
         if (Vector3.Distance(transform.position, unit.NavAgent.destination) <= 2f)
         {
             if (curResourceSource != null)
@@ -74,6 +75,10 @@ public class Worker : MonoBehaviour
 
                     carryType = curResourceSource.RsrcType;
                     amountCarry += gatherAmount;
+                }
+                else
+                {
+                    CheckForResource();
                 }
             }
             else //amount is full, go back to deliver at HQ
@@ -107,7 +112,29 @@ public class Worker : MonoBehaviour
 
             //Debug.Log("Delivered");
         }
+        
+        CheckForResource();
     }
+    
+    private void CheckForResource()
+    {
+        if (curResourceSource != null) //that resource still exists
+            ToGatherResource(curResourceSource, curResourceSource.transform.position);
+        else
+        {
+            //try to find a new resource
+            curResourceSource = unit.Faction.GetClosestResource(transform.position, carryType);
+
+            //CheckAgain, if found a new one, go to it
+            if (curResourceSource != null)
+                ToGatherResource(curResourceSource, curResourceSource.transform.position);else //can't find a new one
+            {
+                Debug.Log($"{unit.name} can't find a new tree");
+                unit.SetState(UnitState.Idle);
+            }
+        }
+    }
+
     
     // Start is called before the first frame update
     void Start()

@@ -40,6 +40,14 @@ public class InfoManager : MonoBehaviour
         wpRngIcon.color = Color.white;
         wpRngTxt.text = $"{unit.WeaponRange}";
     }
+
+    public void ShowAllInfo(ResourceSource r)
+    {
+        SetPic(r.RsrcPic);
+        nameTxt.text = r.RsrcName;
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{r.Quantity}/{r.MaxQuantity}";
+    }
     
     public void ClearAllInfo()
     {

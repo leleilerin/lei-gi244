@@ -12,6 +12,9 @@ public class UnitSelect : MonoBehaviour
     private Unit curUnit; //current selected single unit
     
     [SerializeField]
+    private ResourceSource curResource; //current selected resource
+    
+    [SerializeField]
     private Building curBuilding; //current selected single building
     public Building CurBuilding { get { return curBuilding; } }
     public Unit CurUnit { get { return curUnit; } }
@@ -44,6 +47,13 @@ public class UnitSelect : MonoBehaviour
             ActionManager.instance.ShowBuilderMode(u);
         }
     }
+    
+    private void ShowResource()
+    {
+        InfoManager.instance.ShowAllInfo(curResource);//Show resource info in Info Panel
+
+    }
+    
     private void SelectUnit(RaycastHit hit)
     {
         curUnit = hit.collider.GetComponent<Unit>();
@@ -56,6 +66,16 @@ public class UnitSelect : MonoBehaviour
         {
             ShowUnit(curUnit);
         }
+    }
+    
+    private void ResourceSelect(RaycastHit hit)
+    {
+        curResource = hit.collider.GetComponent<ResourceSource>();
+        if (curResource == null)
+            return;
+
+        curResource.ToggleSelectionVisual(true);
+        ShowResource();//Show resource info
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -74,6 +94,9 @@ public class UnitSelect : MonoBehaviour
                 case "Building":
                     BuildingSelect(hit);
                     break;
+                case "Resource":
+                    ResourceSelect(hit);
+                    break;
             }
         }
     }
@@ -84,6 +107,8 @@ public class UnitSelect : MonoBehaviour
             curUnit.ToggleSelectionVisual(false);
         if (curBuilding != null)
             curBuilding.ToggleSelectionVisual(false);
+        if (curResource != null) 
+            curResource.ToggleSelectionVisual(false);
     }
 
     private void ClearEverything()
