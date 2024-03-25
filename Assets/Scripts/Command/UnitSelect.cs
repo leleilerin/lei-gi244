@@ -15,6 +15,9 @@ public class UnitSelect : MonoBehaviour
     public List<Unit> CurUnits { get { return curUnits; } }
     
     [SerializeField]
+    private Unit curEnemy;
+    
+    [SerializeField]
     private ResourceSource curResource; //current selected resource
     
     [SerializeField]
@@ -57,6 +60,11 @@ public class UnitSelect : MonoBehaviour
             ActionManager.instance.ShowBuilderMode(u);
         }
     }
+
+    private void ShowEnemyUnit(Unit u)
+    {
+        InfoManager.instance.ShowEnemyAllInfo(u);
+    }
     
     private void ShowResource()
     {
@@ -74,6 +82,13 @@ public class UnitSelect : MonoBehaviour
             curUnits.Add(unit);
             unit.ToggleSelectionVisual(true);
             ShowUnit(unit);
+        }
+        else
+        {
+            //single enemy
+            curEnemy = unit;
+            curEnemy.ToggleSelectionVisual(true);
+            ShowEnemyUnit(unit);
         }
     }
     
@@ -118,6 +133,8 @@ public class UnitSelect : MonoBehaviour
             curBuilding.ToggleSelectionVisual(false);
         if (curResource != null) 
             curResource.ToggleSelectionVisual(false);
+        if (curEnemy != null) 
+            curEnemy.ToggleSelectionVisual(false);
     }
 
     private void ClearEverything()

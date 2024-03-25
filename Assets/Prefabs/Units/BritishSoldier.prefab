@@ -5143,7 +5143,7 @@ GameObject:
   - component: {fileID: 9184759744936168417}
   - component: {fileID: -324781660236266057}
   m_Layer: 6
-  m_Name: Soldier
+  m_Name: BritishSoldier
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5260,7 +5260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  unitName: Soldier
+  unitName: Brit. Regular
   unitPic: {fileID: 21300000, guid: e665de935a535824eacda31fde0156ea, type: 3}
   unitWeapon: {fileID: 6454616020111711370}
   curHP: 100
