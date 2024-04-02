@@ -27,6 +27,13 @@ public class Faction : MonoBehaviour
     private Transform startPosition; //start position for Faction
     public Transform StartPosition { get { return startPosition; } }
     
+    [SerializeField] private GameObject[] buildingPrefabs;
+    public GameObject[] BuildingPrefabs { get { return buildingPrefabs; } }
+
+    [SerializeField] private GameObject[] unitPrefabs;
+    public GameObject[] UnitPrefabs { get { return unitPrefabs; } }
+
+    
     [SerializeField] private Nation nation;
     public  Nation Nation
     {
@@ -72,6 +79,12 @@ public class Faction : MonoBehaviour
     
     [SerializeField]
     private int newResourceRange = 50; //range for worker to find new resource
+    
+    private int unitLimit = 6; //Initial unit limit
+    public int UnitLimit { get { return unitLimit; } }
+    private int housingUnitNum = 5; //number of units per each housing
+    public int HousingUnitNum { get { return housingUnitNum; } }
+
     
     // gets the closest resource to the position (random between nearest 3 for some variance)
     public ResourceSource GetClosestResource(Vector3 pos, ResourceType rType)
@@ -210,6 +223,26 @@ public class Faction : MonoBehaviour
 
         if (this == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(this);
+    }
+    
+    public void UpdateHousingLimit()
+    {
+        unitLimit = 6; //starting unit Limit
+
+        foreach (Building b in aliveBuildings)
+        {
+            if (b.IsHousing && b.IsFunctional)
+            {
+                unitLimit += housingUnitNum;
+            }
+        }
+
+        if (unitLimit >= 100)
+            unitLimit = 100;
+        else if (unitLimit < 0)
+            unitLimit = 0;
+
+        MainUI.instance.UpdateAllResource(this);
     }
     
 }

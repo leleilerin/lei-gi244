@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: -2154586010287586953}
   - component: {fileID: -6945589477699387142}
   m_Layer: 7
-  m_Name: House
+  m_Name: Br_House
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   structureName: House
   structurePic: {fileID: 21300000, guid: fcf82972b86d99248a8e714c4b81e836, type: 3}
   curHP: 0
-  maxHP: 0
+  maxHP: 100
   faction: {fileID: 0}
   selectionVisual: {fileID: 37264619429469631}
   structureCost:
@@ -178,14 +178,15 @@ MonoBehaviour:
     stone: 1
   spawnPoint: {fileID: 7050677783542930352}
   rallyPoint: {fileID: 5169417289337764862}
-  unitPrefabs:
-  - {fileID: 186328, guid: ac068e22c5cffc845a63f7a843c2bf19, type: 3}
+  unitPrefabs: []
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
   isFunctional: 0
   isHQ: 0
+  isHousing: 1
+  isBarack: 0
   intoTheGround: 2
 --- !u!65 &519230592492884917
 BoxCollider:
