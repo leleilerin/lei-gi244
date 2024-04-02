@@ -312,6 +312,35 @@ public class Unit : MonoBehaviour
             SetState(UnitState.AttackBuilding);
         }
     }
+    
+    // move to an enemy turret and attack them
+    public void ToAttackTurret(Turret turret)
+    {
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+        curEnemyBuildingTarget = turret;
+        SetState(UnitState.MoveToEnemyBuilding);
+    }
+    
+    // called when an enemy turret attacks us
+    public void TakeDamage(Turret turret, int damage)
+    {
+        //I'm already dead
+        if (curHP <= 0 || state == UnitState.Die)
+            return;
+
+        curHP -= damage;
+
+        if (curHP <= 0)
+        {
+            curHP = 0;
+            Die();
+        }
+
+        if (!IsWorker) //if this unit is not worker
+            ToAttackTurret(turret); //counter-attack at turret
+    }
+
 
     // called every frame the 'AttackBuilding' state is active
     private void AttackBuildingUpdate()

@@ -134,8 +134,8 @@ MonoBehaviour:
   id: 2
   unitName: Builder
   unitPic: {fileID: 21300000, guid: a74ae129f40800c4595176882a81e53c, type: 3}
-  unitWeapon: {fileID: 6503425916200951343}
   curEnemyUnitTarget: {fileID: 0}
+  curEnemyBuildingTarget: {fileID: 0}
   attackRate: 1
   lastAttackTime: 0
   curHP: 100
@@ -179,9 +179,11 @@ MonoBehaviour:
   buildingList:
   - {fileID: 7571719109534072606, guid: e7c696ec0784d194cb9f71df2a8ebe09, type: 3}
   - {fileID: 6361064819130505748, guid: e39dc3bcc04d2c14aa3400bbfb5b5fb3, type: 3}
+  - {fileID: 1416226203114466681, guid: d6d941d107650e84f94b068f9c07db4f, type: 3}
   ghostBuildingList:
   - {fileID: 7571719109534072606, guid: af9e0b451ef9b0540876a7c63b2dccdf, type: 3}
   - {fileID: 6361064819130505748, guid: fd66eca4f7bc5f142b6bfc764c18c11e, type: 3}
+  - {fileID: 1416226203114466681, guid: 61e45dbd2ae62ec49a41c20a43917116, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
@@ -6520,11 +6522,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
---- !u!1 &6503425916200951343 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1309244834713454, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
-  m_PrefabInstance: {fileID: 6504439942162551105}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6506374624857991391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257951475874206, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
