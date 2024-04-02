@@ -66,6 +66,11 @@ public class UnitSelect : MonoBehaviour
         InfoManager.instance.ShowEnemyAllInfo(u);
     }
     
+    private void ShowEnemyBuilding(Building b)
+    {
+        InfoManager.instance.ShowEnemyAllInfo(b);
+    }
+    
     private void ShowResource()
     {
         InfoManager.instance.ShowAllInfo(curResource);//Show resource info in Info Panel
@@ -163,6 +168,10 @@ public class UnitSelect : MonoBehaviour
         {
             //Debug.Log("my building");
             ShowBuilding(curBuilding);//Show building info
+        }
+        else
+        {
+            ShowEnemyBuilding(curBuilding);
         }
     }
     

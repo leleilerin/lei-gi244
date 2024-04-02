@@ -34,6 +34,9 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.AttackUnit:
                 anim.SetBool("IsAttack", true);
                 break;
+            case UnitState.AttackBuilding:
+                anim.SetBool("IsAttack", true);
+                break;
             case UnitState.Gather:
                 anim.SetBool("IsChopping", true);
                 break;
@@ -47,6 +50,9 @@ public class UnitAnimation : MonoBehaviour
                 anim.SetBool("IsIdle", true);
                 break;
             case UnitState.MoveToEnemy:
+                anim.SetBool("IsMove", true);
+                break;
+            case UnitState.MoveToEnemyBuilding:
                 anim.SetBool("IsMove", true);
                 break;
             case UnitState.Die:

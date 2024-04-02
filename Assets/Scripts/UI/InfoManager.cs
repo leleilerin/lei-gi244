@@ -83,6 +83,15 @@ public class InfoManager : MonoBehaviour
         wpRngTxt.text = "";
     }
     
+    public void ShowEnemyAllInfo(Building b)
+    {
+        SetPic(b.StructurePic);
+        nameTxt.text = b.StructureName;
+
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{b.CurHP}/{b.MaxHP}";
+    }
+    
     public void ShowAllInfo(Building building)
     {
         SetPic(building.StructurePic);
