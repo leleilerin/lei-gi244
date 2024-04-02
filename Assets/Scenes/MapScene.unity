@@ -9571,6 +9571,10 @@ PrefabInstance:
       propertyPath: faction
       value: 
       objectReference: {fileID: 1261863044}
+    - target: {fileID: -7463200062538608362, guid: d6d941d107650e84f94b068f9c07db4f, type: 3}
+      propertyPath: isFunctional
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1416226203114466681, guid: d6d941d107650e84f94b068f9c07db4f, type: 3}
       propertyPath: m_Name
       value: FortTower
