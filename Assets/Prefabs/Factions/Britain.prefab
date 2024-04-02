@@ -52,6 +52,14 @@ MonoBehaviour:
   buildingsParent: {fileID: 4479162688756534339}
   ghostBuildingParent: {fileID: 6274823957141315991}
   startPosition: {fileID: 3412322180078947705}
+  buildingPrefabs:
+  - {fileID: 4793110820413483876, guid: f05764981cee36940a3fc4e4ea6208a0, type: 3}
+  - {fileID: 1416226203114466681, guid: d6d941d107650e84f94b068f9c07db4f, type: 3}
+  - {fileID: 7571719109534072606, guid: e7c696ec0784d194cb9f71df2a8ebe09, type: 3}
+  - {fileID: 6361064819130505748, guid: e39dc3bcc04d2c14aa3400bbfb5b5fb3, type: 3}
+  unitPrefabs:
+  - {fileID: 186328, guid: 6f9092a3c15477c4982cb53bace30bd7, type: 3}
+  - {fileID: 186328, guid: ac068e22c5cffc845a63f7a843c2bf19, type: 3}
   nation: 1
   food: 0
   wood: 0
@@ -61,6 +69,7 @@ MonoBehaviour:
   aliveBuildings:
   - {fileID: 0}
   - {fileID: 0}
+  newResourceRange: 50
 --- !u!1 &2084861388538677923
 GameObject:
   m_ObjectHideFlags: 0

@@ -5261,11 +5261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e3b9644683b2447bb87cb1b1b96685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   unitName: Brit. Regular
   unitPic: {fileID: 21300000, guid: e665de935a535824eacda31fde0156ea, type: 3}
-  unitWeapon: {fileID: 4267529786365422406}
   curEnemyUnitTarget: {fileID: 0}
+  curEnemyBuildingTarget: {fileID: 0}
   attackRate: 1
   lastAttackTime: 0
   curHP: 100

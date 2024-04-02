@@ -307,7 +307,7 @@ public class Unit : MonoBehaviour
             navAgent.isStopped = false;
             navAgent.SetDestination(curEnemyBuildingTarget.transform.position);
         }
-        if ((Vector3.Distance(transform.position, curEnemyBuildingTarget.transform.position) - 4f) <= WeaponRange)
+        if ((Vector3.Distance(transform.position, curEnemyBuildingTarget.transform.position) - 5f) <= WeaponRange)
         {
             SetState(UnitState.AttackBuilding);
         }

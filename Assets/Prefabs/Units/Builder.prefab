@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e3b9644683b2447bb87cb1b1b96685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 0
   unitName: Builder
   unitPic: {fileID: 21300000, guid: a74ae129f40800c4595176882a81e53c, type: 3}
   curEnemyUnitTarget: {fileID: 0}
