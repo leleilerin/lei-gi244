@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -271,7 +272,14 @@ public class Faction : MonoBehaviour
         else if (unitLimit < 0)
             unitLimit = 0;
 
-        MainUI.instance.UpdateAllResource(this);
+        if (this == GameManager.instance.MyFaction)
+        {
+            MainUI.instance.UpdateAllResource(this);
+        }
     }
-    
+
+    void Start()
+    {
+        UpdateHousingLimit();
+    }
 }
