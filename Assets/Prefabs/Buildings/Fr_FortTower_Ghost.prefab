@@ -56,8 +56,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 27.87, y: 8.5, z: 30.08}
-  m_Center: {x: 0, y: 4.25, z: -1.3}
+  m_Size: {x: 31, y: 8.5, z: 35.67}
+  m_Center: {x: 0, y: 4.25, z: -1.4}
 --- !u!54 &517356417336781054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80,8 +80,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -99,38 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBuild: 0
   modelRdr:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1902490118360692158}
   planeRdr: {fileID: 7204950648390771019}
 --- !u!1 &2159798148192138075
 GameObject:
@@ -192,8 +161,8 @@ Transform:
   m_GameObject: {fileID: 3624669830625763968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: -1.3}
-  m_LocalScale: {x: 2.787, y: 1, z: 3.08}
+  m_LocalPosition: {x: 0, y: 0.1, z: -1.4}
+  m_LocalScale: {x: 3.1, y: 1, z: 3.567}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5108176448418918600}
@@ -486,6 +455,11 @@ PrefabInstance:
       addedObject: {fileID: 2865485421673975754}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
+--- !u!23 &1902490118360692158 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2365028, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
+  m_PrefabInstance: {fileID: 1902490118362522586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1902490118363013890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 491736, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
