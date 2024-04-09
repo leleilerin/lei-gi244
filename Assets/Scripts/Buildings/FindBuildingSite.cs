@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FindBuildingSite : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     private bool canBuild = false;
     public bool CanBuild { get { return canBuild; } set { canBuild = value; } }
 
-    [SerializeField]
+    [SerializeField] 
     private MeshRenderer[] modelRdr;
-    [SerializeField]
+    [SerializeField] 
     private MeshRenderer planeRdr;
     
     // Start is called before the first frame update
@@ -18,14 +18,16 @@ public class FindBuildingSite : MonoBehaviour
     {
         //Setup Building Color
         for (int i = 0; i < modelRdr.Length; i++)
-            modelRdr[i].material.color = Color.green;     
+        {
+            modelRdr[i].material.color = Color.green;
+        }
         
         //Setup Plane Color
         planeRdr.material.color = Color.green;
-        
+
         CanBuild = true;
     }
-    
+
     private void SetCanBuild(bool flag)
     {
         if (flag)
@@ -45,7 +47,6 @@ public class FindBuildingSite : MonoBehaviour
             canBuild = false;
         }
     }
-    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Resource" || other.tag == "Building" || other.tag == "Unit")
