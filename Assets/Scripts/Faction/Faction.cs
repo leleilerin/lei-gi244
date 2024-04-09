@@ -29,6 +29,9 @@ public class Faction : MonoBehaviour
     
     [SerializeField] private GameObject[] buildingPrefabs;
     public GameObject[] BuildingPrefabs { get { return buildingPrefabs; } }
+    
+    [SerializeField] private GameObject[] ghostBuildingPrefabs;
+    public GameObject[] GhostBuildingPrefabs { get { return ghostBuildingPrefabs; } }
 
     [SerializeField] private GameObject[] unitPrefabs;
     public GameObject[] UnitPrefabs { get { return unitPrefabs; } }
@@ -219,6 +222,10 @@ public class Faction : MonoBehaviour
     {
         foreach (Building b in aliveBuildings)
         {
+            if (b == null)
+            {
+                continue;
+            }
             if (b.IsHQ)
                 return b.SpawnPoint.position;
         }

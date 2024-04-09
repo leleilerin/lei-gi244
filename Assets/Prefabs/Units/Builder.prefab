@@ -180,10 +180,20 @@ MonoBehaviour:
   - {fileID: 7571719109534072606, guid: e7c696ec0784d194cb9f71df2a8ebe09, type: 3}
   - {fileID: 6361064819130505748, guid: e39dc3bcc04d2c14aa3400bbfb5b5fb3, type: 3}
   - {fileID: 1416226203114466681, guid: d6d941d107650e84f94b068f9c07db4f, type: 3}
+  - {fileID: 4793110820413483876, guid: f05764981cee36940a3fc4e4ea6208a0, type: 3}
+  - {fileID: 4793110820413483876, guid: 9ad2e677243ec9b4c93405cf439566cb, type: 3}
+  - {fileID: 1416226203114466681, guid: 119183c1de2b990429cbb78a4fd76ca5, type: 3}
+  - {fileID: 7571719109534072606, guid: b036f8f7b8afb1544b80ee947b3e79e7, type: 3}
+  - {fileID: 6361064819130505748, guid: f6e0c75319a34af4fa050569f617ca5e, type: 3}
   ghostBuildingList:
   - {fileID: 7571719109534072606, guid: af9e0b451ef9b0540876a7c63b2dccdf, type: 3}
   - {fileID: 6361064819130505748, guid: fd66eca4f7bc5f142b6bfc764c18c11e, type: 3}
   - {fileID: 1416226203114466681, guid: 61e45dbd2ae62ec49a41c20a43917116, type: 3}
+  - {fileID: 4793110820413483876, guid: a522707cae50ca5409660c9666490819, type: 3}
+  - {fileID: 4793110820413483876, guid: 51729d0d5438c1b4c850a33937da7f23, type: 3}
+  - {fileID: 1416226203114466681, guid: e4db075edc47a164dad3c13143bcdf78, type: 3}
+  - {fileID: 7571719109534072606, guid: e166c324d4769d744888e0935546bce5, type: 3}
+  - {fileID: 4793110820413483876, guid: a522707cae50ca5409660c9666490819, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
