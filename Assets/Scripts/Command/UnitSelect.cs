@@ -29,7 +29,9 @@ public class UnitSelect : MonoBehaviour
     private Vector2 oldAnchoredPos;//Box old anchored position
     private Vector2 startPos;//point where mouse is down
 
-
+    private float timer = 0f;
+    private float timeLimit = 0.5f;
+    
     private Camera cam;
     private Faction faction;
 
@@ -145,8 +147,11 @@ public class UnitSelect : MonoBehaviour
     private void ClearEverything()
     {
         ClearAllSelectionVisual();
+        
         curUnits.Clear();
         curBuilding = null;
+        curResource = null;
+        curEnemy = null;
         
         //clear UI
         InfoManager.instance.ClearAllInfo();
@@ -217,6 +222,23 @@ public class UnitSelect : MonoBehaviour
         selectionBox.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
     }
     
+    private void UpdateUI()
+    {
+        if (curUnits.Count == 1)
+            ShowUnit(curUnits[0]);
+        else if (curEnemy != null)
+            ShowEnemyUnit(curEnemy);
+        else if (curResource != null)
+            ShowResource();
+        else if (curBuilding != null)
+        {
+            if (GameManager.instance.MyFaction.IsMyBuilding(curBuilding))
+                ShowBuilding(curBuilding);//Show building info
+            else
+                ShowEnemyBuilding(curBuilding);
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -243,6 +265,12 @@ public class UnitSelect : MonoBehaviour
         {
             ReleaseSelectionBox(Input.mousePosition);
             TrySelect(Input.mousePosition);
+        }
+
+        if (timer >= timeLimit)
+        {
+            timer = 0f;
+            UpdateUI();
         }
     }
 }
