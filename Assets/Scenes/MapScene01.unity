@@ -8045,7 +8045,7 @@ PrefabInstance:
       objectReference: {fileID: 302199519}
     - target: {fileID: 5905582119552868923, guid: d03423f4c387e054092b40d2ae2190d5, type: 3}
       propertyPath: aliveUnits.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5905582119552868923, guid: d03423f4c387e054092b40d2ae2190d5, type: 3}
       propertyPath: unitPrefabs.Array.size
@@ -9064,11 +9064,11 @@ PrefabInstance:
     - target: {fileID: 5817599177781572947, guid: 9e500631295aa6348973f731fe7dcaab, type: 3}
       propertyPath: myFaction
       value: 
-      objectReference: {fileID: 1261863044}
+      objectReference: {fileID: 0}
     - target: {fileID: 5817599177781572947, guid: 9e500631295aa6348973f731fe7dcaab, type: 3}
       propertyPath: enemyFaction
       value: 
-      objectReference: {fileID: 1777665474}
+      objectReference: {fileID: 0}
     - target: {fileID: 5817599177781572947, guid: 9e500631295aa6348973f731fe7dcaab, type: 3}
       propertyPath: factions.Array.data[0]
       value: 
