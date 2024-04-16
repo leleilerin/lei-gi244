@@ -1027,8 +1027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3724bc24b28f1e499042cc98adab60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuScene: 
-  chooseMapScene: 
+  mainMenuScene: MainMenu
+  chooseMapScene: ChooseMap
 --- !u!1 &1837915211
 GameObject:
   m_ObjectHideFlags: 0
