@@ -80,6 +80,11 @@ public class CameraController : MonoBehaviour
         transform.position = Clamp(corner1.position, corner2.position);
     }
     
+    public void FocusOnPosition(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+    
     void Awake()
     {
         instance = this;
