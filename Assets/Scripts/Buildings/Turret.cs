@@ -34,8 +34,6 @@ public class Turret : Building
             //Debug.Log("Test - " + hits[x].collider.gameObject.ToString());
             Unit target = hits[x].collider.GetComponent<Unit>();
 
-            continue;
-
             // skip if this is myself
             if (hits[x].collider.gameObject == gameObject)
                 continue;
