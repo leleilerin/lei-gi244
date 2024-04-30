@@ -134,6 +134,7 @@ MonoBehaviour:
   id: 0
   unitName: Builder
   unitPic: {fileID: 21300000, guid: a74ae129f40800c4595176882a81e53c, type: 3}
+  unitWeapon: {fileID: 6503425916200951343}
   curEnemyUnitTarget: {fileID: 0}
   curEnemyBuildingTarget: {fileID: 0}
   attackRate: 1
@@ -6465,7 +6466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1309244834713454, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4257951475874206, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
       propertyPath: m_LocalScale.x
@@ -6524,6 +6525,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
+--- !u!1 &6503425916200951343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1309244834713454, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}
+  m_PrefabInstance: {fileID: 6504439942162551105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6506374624857991391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257951475874206, guid: e5be75d5ca4632148b3b88be731396f1, type: 3}

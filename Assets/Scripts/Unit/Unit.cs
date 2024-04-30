@@ -42,6 +42,9 @@ public class Unit : MonoBehaviour
     [SerializeField] private Sprite unitPic;
     public Sprite UnitPic { get { return unitPic; } }
     
+    [SerializeField] private GameObject unitWeapon;
+    public GameObject UnitWeapon { get { return unitWeapon; } }
+    
     [SerializeField]
     private Unit curEnemyUnitTarget;
 

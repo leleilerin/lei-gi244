@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4286123096892714526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 2987583331155912835}
   - component: {fileID: 6906128447523179830}
   - component: {fileID: 8932637908144497896}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fr_Barrack
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,10 +90,10 @@ MonoBehaviour:
   faction: {fileID: 0}
   selectionVisual: {fileID: 2893535437432107526}
   structureCost:
-    food: 0
-    wood: 0
-    gold: 0
-    stone: 0
+    food: 1
+    wood: 1
+    gold: 1
+    stone: 1
   spawnPoint: {fileID: 4157349945950277162}
   rallyPoint: {fileID: 7259929584122796945}
   unitPrefabs:
@@ -244,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6364351327277209933}
   - component: {fileID: 5339156765099894166}
   - component: {fileID: 7081351221049970910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4286123096892714526}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,9 +150,9 @@ GameObject:
   - component: {fileID: 2987583331155912835}
   - component: {fileID: 8932637908144497896}
   - component: {fileID: 4800364044498664289}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fr_Barrack_Ghost
-  m_TagString: Untagged
+  m_TagString: GhostBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -324,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4439179991092877523, guid: 57b8166cd83634d48be31cb049303b4b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4439179991092877523, guid: 57b8166cd83634d48be31cb049303b4b, type: 3}
       propertyPath: m_IsActive

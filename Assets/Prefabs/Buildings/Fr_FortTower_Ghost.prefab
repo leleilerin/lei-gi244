@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5462813542991035845}
   - component: {fileID: 517356417336781054}
   - component: {fileID: 8301115632400324876}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fr_FortTower_Ghost
-  m_TagString: Untagged
+  m_TagString: GhostBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357588042338840859}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 89411750883759878}
   - component: {fileID: 7204950648390771019}
   - component: {fileID: 1828674509072658891}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_16
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -317,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_14
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 92
@@ -382,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 182560, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Base_Circle_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 182560, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 491736, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
       propertyPath: m_RootOrder
@@ -531,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3512116353653178800, guid: e1cb55d85ed19024f9b35d75e2642ae2, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3512116353653178800, guid: e1cb55d85ed19024f9b35d75e2642ae2, type: 3}
       propertyPath: m_IsActive
@@ -558,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_RootOrder
@@ -629,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_17
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 106
@@ -694,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Cannon_15
+      objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
