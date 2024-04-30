@@ -131,7 +131,19 @@ MonoBehaviour:
   selectionVisual: {fileID: 4801265763824185232}
   onRsrcQuantityChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1503327931422916302}
+        m_TargetAssemblyTypeName: ResourceUI, Assembly-CSharp
+        m_MethodName: OnQuantityChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInfoQuantityChange:
     m_PersistentCalls:
       m_Calls: []
@@ -279,6 +291,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b23a4fb2382454d9b288730f2b636a, type: 3}
+--- !u!114 &1503327931422916302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3023903053364730305, guid: 19b23a4fb2382454d9b288730f2b636a, type: 3}
+  m_PrefabInstance: {fileID: 4407875078401074959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6238e5e0adea87f489ea8cb4ca985b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3405716794659335478 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1326418283727211065, guid: 19b23a4fb2382454d9b288730f2b636a, type: 3}
